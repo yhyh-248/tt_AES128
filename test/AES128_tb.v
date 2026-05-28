@@ -68,9 +68,9 @@ module aes128_top_test;
         #(CLK_PERIOD);
 
         // Open files
-        data_in_file     = $fopen("vectors/data_in.txt", "r");
-        key_file         = $fopen("vectors/key_in.txt",  "r");
-        expected_out_file = $fopen("vectors/data_out.txt", "r");
+        data_in_file     = $fopen("data_in.txt", "r");
+        key_file         = $fopen("key_in.txt",  "r");
+        expected_out_file = $fopen("data_out.txt", "r");
 
         if (data_in_file == 0 || key_file == 0 || expected_out_file == 0) begin
             $display("ERROR: Could not open test vector files");
